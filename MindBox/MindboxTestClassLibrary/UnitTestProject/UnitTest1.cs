@@ -13,5 +13,16 @@ namespace UnitTestProject
             Triangle triangle = new Triangle(11.5, 12.5, 20);
             Assert.AreEqual(66.249528, triangle.GetArea(), 0.000001);
         }
+
+        [TestMethod]
+        public void TestMethodTriangleCheckRight()
+        {
+            Triangle triangle1 = new Triangle(9, 15, 12);
+            Assert.AreEqual(true, triangle1.CheckRight());
+
+            Triangle triangle2 = new Triangle(2, 2, 4);
+            Assert.AreEqual(false, triangle2.CheckRight());
+        }
+
     }
 }

@@ -23,5 +23,16 @@ namespace MindboxTestClassLibrary
 
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
+
+        public bool CheckRight()
+        {
+            double k1, k2, gip;
+            k1 = Math.Min(a, b);
+            gip = Math.Max(a, b);
+            k2 = Math.Min(c, gip);
+            gip = Math.Max(c, gip);
+
+            return k1 * k1 + k2 * k2 == gip * gip ? true : false;
+        }
     }
 }
