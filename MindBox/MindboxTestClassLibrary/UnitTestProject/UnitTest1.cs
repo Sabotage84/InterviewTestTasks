@@ -24,5 +24,12 @@ namespace UnitTestProject
             Assert.AreEqual(false, triangle2.CheckRight());
         }
 
+        [TestMethod]
+        public void TestMethodCircleArea()
+        {
+            Circle circle = new Circle(5);
+            Assert.AreEqual(78.53981625, circle.GetArea(), 0.000001);
+        }
+
     }
 }
