@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MindboxTestClassLibrary
 {
-    public class Triangle
+    public class Triangle:IAreaCalculatable
     {
         double a, b, c;
 

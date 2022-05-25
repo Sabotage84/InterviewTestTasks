@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MindboxTestClassLibrary
 {
-    public class Circle
+    public class Circle:IAreaCalculatable
     {
         double radius;
         public Circle(double r)

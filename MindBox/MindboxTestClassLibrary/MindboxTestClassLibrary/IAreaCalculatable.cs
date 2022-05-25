@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MindboxTestClassLibrary
 {
-    abstract public class ShapeHandler
+    public interface IAreaCalculatable
     {
+        double GetArea();
     }
 }
