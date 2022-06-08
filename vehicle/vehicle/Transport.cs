@@ -11,6 +11,7 @@ namespace vehicle
         double averageFuelConsumption;
         double tankCapacity;
         double speed;
+        double currentTankCapacity;
 
         protected Transport(double averageFuelConsumption, double tankCapacity, double speed)
         {
@@ -22,15 +23,16 @@ namespace vehicle
         public double AverageFuelConsumption { get => averageFuelConsumption; set => averageFuelConsumption = value; }
         public double TankCapacity { get => tankCapacity; set => tankCapacity = value; }
         public double Speed { get => speed; set => speed = value; }
+        public double CurrentTankCapacity { get => currentTankCapacity; set => currentTankCapacity = value; }
 
         public virtual double GetMaxDistance()
         {
-            return 0;
+            return TankCapacity/AverageFuelConsumption;
         }
 
         public virtual double GetCurrentDistance()
         {
-            return 0;
+            return CurrentTankCapacity/AverageFuelConsumption;
         }
 
     }
