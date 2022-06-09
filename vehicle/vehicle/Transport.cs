@@ -30,6 +30,11 @@ namespace vehicle
             return TankCapacity/AverageFuelConsumption;
         }
 
+        public virtual double GetFuelByDistance(int dist)
+        {
+            return dist / AverageFuelConsumption;
+        }
+
         public virtual double GetCurrentDistance()
         {
             return CurrentTankCapacity/AverageFuelConsumption;
