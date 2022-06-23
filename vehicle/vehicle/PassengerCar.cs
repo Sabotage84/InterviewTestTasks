@@ -8,18 +8,19 @@ namespace vehicle
 {
     class PassengerCar : Transport
     {
-        const int MAX_PASSENGERS = 4;
+        int maxPassengers;
 
         int currentPassengers;
-        public PassengerCar( double averageFuelConsumption, double tankCapacity, double speed, int curPas = 0) : base(averageFuelConsumption, tankCapacity, speed)
+        public PassengerCar( double averageFuelConsumption, double tankCapacity, double speed, int curPas = 0, int maxPass=4) : base(averageFuelConsumption, tankCapacity, speed)
         {
+            MaxPassengers = maxPass;
             CurrentPassengers = curPas;
         }
 
         public int CurrentPassengers { get => currentPassengers; 
         set
             {
-                if (value < 0 || value > MAX_PASSENGERS)
+                if (value < 0 || value > MaxPassengers)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -30,6 +31,6 @@ namespace vehicle
             }
         }
 
-
+        public int MaxPassengers { get => maxPassengers; set => maxPassengers = value; }
     }
 }
