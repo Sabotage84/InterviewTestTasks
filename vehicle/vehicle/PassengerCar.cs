@@ -32,5 +32,21 @@ namespace vehicle
         }
 
         public int MaxPassengers { get => maxPassengers; set => maxPassengers = value; }
+
+        public double GetMaxDistanceWithPassengers()
+        {
+            return GetMaxDistance() * (0.06 * CurrentPassengers);
+        }
+
+        public double GetCurrentDistanceWithPassengers()
+        {
+            return GetCurrentDistance() * (0.06 * CurrentPassengers);
+        }
+
+        public double GetFuelByDistanceWithPassengers(int dist)
+        {
+            return GetFuelByDistance(dist) * (0.06 * CurrentPassengers);
+        }
+
     }
 }
