@@ -10,20 +10,54 @@ namespace GetDataFromServer
 {
     public class HTTPGetter
     {
-        string addres;
-
-        public string Addres { get => addres; set => addres = value; }
-
         public object GetData(string path)
         {
             object res=null;
 
             using (var client = new WebClient())
             {
+                try
+                {
+                    using (Stream stream = client.OpenRead(path))
+                    {
+                        using (StreamReader reader = new StreamReader(stream))
+                        {
+                            res = reader.ReadToEnd();
+                        }
+                    }
+                }
+                catch (WebException e)
+                {
+
+                    res = "File or server not found!\n"+ path+"\n";
+                    res += e.Message;
+                }
                 
-                Stream stream = client.OpenRead("https://ptime.ru/robots.txt");
-                StreamReader reader = new StreamReader(stream);
-                res = reader.ReadToEnd();
+            }
+
+            return res;
+        }
+
+        public string GetString(string path)
+        {
+           string res = "";
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (Stream stream = client.OpenRead(path))
+                    {
+                        using (StreamReader reader = new StreamReader(stream))
+                        {
+                            res = reader.ReadToEnd();
+                        }
+                    }
+                }
+            }
+            catch(WebException e)
+            {
+                res = "File or server not found!\n" + path + "\n";
+                res += e.Message;
             }
 
             return res;

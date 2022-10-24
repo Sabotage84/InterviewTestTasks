@@ -12,8 +12,12 @@ namespace GetDataFromServer
         {
             HTTPGetter test = new HTTPGetter();
 
-            string t= (string)test.GetData(@"https://ptime.ru/robots.txt");
+            string t= (string)test.GetData(@"https://ptime.ru/robots2.txt");
             Console.WriteLine(t);
+
+            t = test.GetString(@"https://ptime.ru/robots.txt");
+            Console.WriteLine(t);
+
             Console.ReadLine();
         }
     }
