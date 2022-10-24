@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PranoikScan", "PranoikScan\PranoikScan.csproj", "{0A0B461C-C4BF-41AC-B8B8-4DED32011B2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A0B461C-C4BF-41AC-B8B8-4DED32011B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0B461C-C4BF-41AC-B8B8-4DED32011B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0B461C-C4BF-41AC-B8B8-4DED32011B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0B461C-C4BF-41AC-B8B8-4DED32011B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E8BCA8A-DFB5-4532-B1B2-1F68746527E1}
+	EndGlobalSection
+EndGlobal
