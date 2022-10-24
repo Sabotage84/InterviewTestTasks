@@ -10,6 +10,11 @@ namespace GetDataFromServer
     {
         static void Main(string[] args)
         {
+            HTTPGetter test = new HTTPGetter();
+
+            string t= (string)test.GetData(@"https://ptime.ru/robots.txt");
+            Console.WriteLine(t);
+            Console.ReadLine();
         }
     }
 }
